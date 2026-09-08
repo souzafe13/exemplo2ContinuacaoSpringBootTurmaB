@@ -59,8 +59,8 @@ public class ProdutoController {
             return ResponseEntity.notFound().build();
         }
     }
-    
-    @PutMapping("/{id}")
+
+    @PutMapping ("/{id}")
     public ResponseEntity<Produto> atualizarProduto(@PathVariable Long id, @RequestBody Produto produtoAtualizado) {
         Optional<Produto> produtoBuscado = repository.findById(id);
 
